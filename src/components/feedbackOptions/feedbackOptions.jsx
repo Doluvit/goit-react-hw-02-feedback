@@ -1,21 +1,22 @@
 import PropTypes from 'prop-types';
+import { ButtonItem, ButtonList } from './feedbackOptions.styled';
 
 export const Feedback = ({ options, hadleClick }) => {
   return (
     <>
-      <ul>
+      <ButtonList>
         {options.map((option, index) => {
           const name = option.charAt(0).toUpperCase() + option.slice(1);
 
           return (
             <li key={index}>
-              <button type="button" onClick={() => hadleClick(option)}>
+              <ButtonItem type="button" onClick={() => hadleClick(option)}>
                 {name}
-              </button>
+              </ButtonItem>
             </li>
           );
         })}
-      </ul>
+      </ButtonList>
     </>
   );
 };

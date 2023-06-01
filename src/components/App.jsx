@@ -3,6 +3,7 @@ import { Feedback } from './feedbackOptions/feedbackOptions';
 import { Section } from './section/section';
 import { Statistics } from './statistics/statistics';
 import { Notification } from './notification/notification';
+import { MainContainer } from './App.styled';
 
 
 export class App extends Component {
@@ -33,7 +34,7 @@ export class App extends Component {
     const percentages = this.countPositiveFeedbackPercentage(total, good);
 
     return (
-      <div>
+      <MainContainer>
         <Section title="Please leave feedback">
           <Feedback options={options} hadleClick={this.hadleClick}></Feedback>
         </Section>
@@ -51,7 +52,7 @@ export class App extends Component {
             />
           )}
         </Section>
-      </div>
+      </MainContainer>
     );
   }
 }
