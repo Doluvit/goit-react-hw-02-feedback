@@ -2,22 +2,29 @@ import styled from "styled-components";
 
 
 export const ButtonList = styled.ul`
-display: flex;
-gap: 10px;
-padding: 0;
-`
+  display: flex;
+  gap: 20px;
+  padding: 0;
+ `;
 
 export const ButtonItem = styled.button`
-border: 1px solid lightgray;
-border-radius: 5px;
-font-size: medium;
+  padding: 10px 15px;
 
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--textColor);
 
-&:hover {
-    scale: 1.1;
-}
+  background-color: var(--itemBackgroundColor);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  box-shadow: var(--mainBoxShadow);
 
-&:active {
-    background-color: lightskyblue;
-}
-`
+  cursor: pointer;
+
+  transition: all 250ms ease-in-out;
+
+  :hover {
+    color: var(--accentTextColor);
+    background-color: var(--mainBackgroundColor);
+  }
+`;

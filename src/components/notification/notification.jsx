@@ -1,6 +1,6 @@
-
+import { NotificationAlert } from './notification.styled';
 
 export const Notification = ({ message }) =>
 {
-    return <span>{message}</span>
+    return <NotificationAlert>{message}</NotificationAlert>
 }
